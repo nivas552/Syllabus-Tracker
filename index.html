@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Syllabus Tracker1</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css">
+    <title>Syllabus Tracker</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fefefe;
+            font-family: Arial, sans-serif;
+            color: #106c9f;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: center; /* Center the logo */
+            align-items: center;
+            padding: 20px;
+            background-color: #d0e6ec;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .logo img {
+            height: 80px; /* Adjusted logo size */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Center nav links */
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #106c9f;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #b8e0e8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .hero-content p {
+            margin-bottom: 20px; /* Spacing for paragraph */
+        }
+
+        .cta-button {
+            padding: 15px 30px; /* Adjusted button size */
+            background-color: #106c9f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem; /* Increased font size */
+        }
+
+        /* Input Section */
+        .input-section {
+            padding: 40px 20px;
+            background-color: #91d8f3;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-section h3 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 80%; /* Set to 80% for better alignment */
+            max-width: 400px; /* Set a maximum width */
+            border: 1px solid #106c9f;
+            border-radius: 5px;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #106c9f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Add spacing */
+        }
+
+        /* Charts Section */
+        .charts-section {
+            padding: 40px 20px;
+            background-color: #fefefe;
+            text-align: center;
+        }
+
+        .chart-container {
+            margin-bottom: 20px;
+            max-width: 400px; /* Maximum width for the chart containers */
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+        }
+
+        /* Result Table */
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .result-table th,
+        .result-table td {
+            border: 1px solid #106c9f;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Distinct styles for Units and Labs */
+        .result-table th {
+            background-color: #d0e6ec;
+        }
+
+        /* Calendar Section */
+        .calendar-section {
+            padding: 40px 20px;
+            background-color: #b8e0e8;
+            text-align: center;
+        }
+
+        /* Footer Styles */
+        footer {
+            padding: 20px;
+            background-color: #106c9f;
+            color: #fff;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Icons styles */
+        .icon {
+            font-size: 1.5rem; /* Icon size */
+            margin-right: 5px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <a href="#"><img src="https://i.ibb.co/Wg9x1fp/Picsart-24-08-31-00-06-26-772.png" alt="Syllabus Tracker Logo"></a>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Track Your Syllabus and Lab Progress 📚</h2>
+        <p>Input your syllabus and labs details and visualize your progress in the charts and graphs. Manage deadlines with the built-in calendar.</p>
+        <a href="#input-section" class="cta-button">Get Started 🚀</a>
+    </div>
+</section>
+
+<!-- Input Section -->
+<section id="input-section" class="input-section">
+    <h3>Enter Your Syllabus and Labs Details</h3>
+    <form id="syllabus-form">
+        <label for="subject"><i class="icon fas fa-book"></i> Subject:</label>
+        <input type="text" id="subject" placeholder="Enter subject name" required>
+
+        <label for="units"><i class="icon fas fa-list-alt"></i> Units Covered:</label>
+        <input type="number" id="units" placeholder="Enter number of units" required>
+
+        <label for="total-units"><i class="icon fas fa-th-list"></i> Total Units:</label>
+        <input type="number" id="total-units" placeholder="Enter total number of units" required>
+
+        <label for="lab-names"><i class="icon fas fa-vials"></i> Lab Names:</label>
+        <input type="text" id="lab-names" placeholder="Enter lab names separated by commas" required>
+
+        <label for="labs"><i class="icon fas fa-flask"></i> Labs Covered:</label>
+        <input type="number" id="labs" placeholder="Enter number of labs covered" required>
+
+        <label for="total-labs"><i class="icon fas fa-flask"></i> Total Labs:</label>
+        <input type="number" id="total-labs" placeholder="Enter total number of labs" required>
+
+        <label for="deadline"><i class="icon fas fa-calendar"></i> Select Deadline for Units:</label>
+        <input type="date" id="deadline">
+
+        <button type="submit" class="submit-button">Generate Report</button>
+    </form>
+</section>
+
+<!-- Charts Section -->
+<section id="charts-section" class="charts-section">
+    <h3>Your Progress</h3>
+    <div class="chart-container">
+        <canvas id="unitsChart" width="300" height="200"></canvas> <!-- Adjusted size -->
+    </div>
+    <div class="chart-container">
+        <canvas id="labsChart" width="300" height="200"></canvas> <!-- Adjusted size -->
+    </div>
+    <div class="chart-container">
+        <canvas id="progressPieChart" width="300" height="200"></canvas> <!-- Adjusted size -->
+    </div>
+
+    <!-- Table to display the same data -->
+    <table id="result-table" class="result-table">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Units Covered</th>
+                <th>Units Remaining</th>
+                <th>Labs Covered</th>
+                <th>Labs Remaining</th>
+                <th>Lab Names</th>
+                <th>Progress (%)</th>
+                <th>Deadline</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Data from the chart will be displayed here -->
+        </tbody>
+    </table>
+    <button id="download-report" class="submit-button" style="margin-top: 10px;">Download Report</button>
+</section>
+
+<!-- Calendar Section -->
+<section id="calendar-section" class="calendar-section">
+    <h3>Your Deadlines</h3>
+    <div id="calendar"></div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Syllabus Tracker. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+<!-- Include JavaScript Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/2.9.4/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
+<!-- JavaScript Code -->
+<script>
+    document.getElementById("syllabus-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page refresh
+
+        // Get form values
+        const subject = document.getElementById("subject").value;
+        const units = parseInt(document.getElementById("units").value);
+        const totalUnits = parseInt(document.getElementById("total-units").value);
+        const labNames = document.getElementById("lab-names").value.split(",");
+        const labsCovered = parseInt(document.getElementById("labs").value);
+        const totalLabs = parseInt(document.getElementById("total-labs").value);
+        const deadline = document.getElementById("deadline").value;
+
+        // Calculate remaining units and labs
+        const remainingUnits = totalUnits - units;
+        const remainingLabs = totalLabs - labsCovered;
+
+        // Calculate progress percentage
+        const progressUnits = ((units / totalUnits) * 100).toFixed(2);
+        const progressLabs = ((labsCovered / totalLabs) * 100).toFixed(2);
+
+        // Update the result table
+        const tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = ""; // Clear existing rows
+        const row = `<tr>
+            <td>${subject}</td>
+            <td>${units}</td>
+            <td>${remainingUnits}</td>
+            <td>${labsCovered}</td>
+            <td>${remainingLabs}</td>
+            <td>${labNames.join(", ")}</td>
+            <td>${Math.min(progressUnits, 100)}%</td>
+            <td>${deadline ? new Date(deadline).toLocaleDateString() : "No Deadline"}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+
+        // Update charts
+        updateCharts(units, totalUnits, labsCovered, totalLabs);
+        
+        // Update calendar with deadline
+        if (deadline) {
+            const calendar = FullCalendar.Calendar.getInstance('calendar'); // Ensure calendar instance is available
+            calendar.addEvent({
+                title: subject,
+                start: deadline,
+                allDay: true
+            });
+        }
+    });
+
+    // Function to update charts
+    function updateCharts(units, totalUnits, labsCovered, totalLabs) {
+        const unitsChart = new Chart(document.getElementById("unitsChart"), {
+            type: 'bar',
+            data: {
+                labels: ['Covered', 'Remaining'],
+                datasets: [{
+                    label: 'Units',
+                    data: [units, totalUnits - units],
+                    backgroundColor: ['#106c9f', '#b8e0e8']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Maintain aspect ratio
+            }
+        });
+
+        const labsChart = new Chart(document.getElementById("labsChart"), {
+            type: 'bar',
+            data: {
+                labels: ['Covered', 'Remaining'],
+                datasets: [{
+                    label: 'Labs',
+                    data: [labsCovered, totalLabs - labsCovered],
+                    backgroundColor: ['#106c9f', '#b8e0e8']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Maintain aspect ratio
+            }
+        });
+
+        const progressPieChart = new Chart(document.getElementById("progressPieChart"), {
+            type: 'pie',
+            data: {
+                labels: ['Units Covered', 'Units Remaining'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [units, totalUnits - units],
+                    backgroundColor: ['#106c9f', '#b8e0e8']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Maintain aspect ratio
+            }
+        });
+    }
+
+    // Initialize FullCalendar
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [] // You can add events here if needed
+        });
+        calendar.render();
+    });
+
+    // Download report functionality
+    document.getElementById("download-report").addEventListener("click", function() {
+        const element = document.getElementById("charts-section"); // Section to capture
+
+        // Download as image
+        html2canvas(element).then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+            const link = document.createElement("a");
+            link.href = imgData;
+            link.download = "syllabus_tracker_report.png"; // Image filename
+            link.click();
+        });
+
+        // Download as PDF
+        const pdf = new jsPDF();
+        pdf.html(element, {
+            callback: function (doc) {
+                doc.save("syllabus_tracker_report.pdf"); // PDF filename
+            },
+            x: 10,
+            y: 10
+        });
+    });
+</script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

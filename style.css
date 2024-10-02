@@ -1,0 +1,207 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefefe;
+    font-family: Arial, sans-serif;
+    color: #106c9f;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    padding: 20px;
+    background-color: #d0e6ec;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.logo img {
+    height: 80px; /* Adjusted logo size */
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center nav links */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #106c9f;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #b8e0e8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    margin-bottom: 20px; /* Spacing for paragraph */
+}
+
+.cta-button {
+    padding: 15px 30px; /* Adjusted button size */
+    background-color: #106c9f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+/* Input Section */
+.input-section {
+    padding: 40px 20px;
+    background-color: #91d8f3;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h3 {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 80%; /* Set to 80% for better alignment */
+    max-width: 400px; /* Set a maximum width */
+    border: 1px solid #106c9f;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #106c9f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add spacing */
+}
+
+/* Charts Section */
+.charts-section {
+    padding: 40px 20px;
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.chart-container {
+    margin-bottom: 20px;
+    max-width: 400px; /* Maximum width for the chart containers */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+}
+
+/* Optional: Adjust canvas sizes */
+canvas {
+    width: 100% !important; /* Make canvas responsive */
+    height: auto !important; /* Keep aspect ratio */
+}
+
+/* Result Table */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #106c9f;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Distinct styles for Units and Labs */
+.result-table th {
+    background-color: #d0e6ec;
+}
+
+.result-table .units {
+    background-color: #91d8f3; /* Lighter color for Units */
+}
+
+.result-table .labs {
+    background-color: #b8e0e8; /* Different color for Labs */
+}
+
+/* Calendar Section */
+.calendar-section {
+    padding: 40px 20px;
+    background-color: #b8e0e8;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #106c9f;
+    color: #fff;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Icons styles */
+.icon {
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Additional Styles for Improved UI */
+label {
+    display: flex;
+    align-items: center; /* Align icon with text */
+    margin: 10px 0;
+    font-weight: bold; /* Bold for better visibility */
+}
+
+/* Add some hover effects */
+.submit-button:hover {
+    background-color: #0e5c8c; /* Darker shade on hover */
+}
+
+.cta-button:hover {
+    background-color: #0e5c8c; /* Darker shade on hover */
+}
+
+/* Background Image for Entire Body */
+body {
+    background: url('https://your-background-image-url.jpg') no-repeat center center fixed; /* Add your own image URL */
+    background-size: cover; /* Make it cover the entire body */
+}
